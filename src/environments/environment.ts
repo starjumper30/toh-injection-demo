@@ -3,6 +3,10 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
+import {HeroDevService} from '../app/shared/hero-dev.service';
+import {HttpClient} from '@angular/common/http';
+
 export const environment = {
-  production: false
+  production: false,
+  heroServiceProvider: {useClass: HeroDevService, deps: [HttpClient]}
 };

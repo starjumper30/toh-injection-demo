@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {HeroService} from './hero.service';
 import {ExtraService} from './extra.service';
 
 @NgModule({
@@ -14,6 +13,6 @@ import {ExtraService} from './extra.service';
     FormsModule
   ],
   declarations: [],
-  providers: [HeroService, ExtraService]
+  providers: [ExtraService]
 })
 export class SharedModule { }
