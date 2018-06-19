@@ -4,10 +4,10 @@ import { Observable, throwError as observableThrowError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { Hero } from '../shared/hero';
-import {HeroSearchModule} from './hero-search.module';
+import {HeroSearchApiModule} from './hero-search-api.module';
 
 let count = 0;
-@Injectable({providedIn: HeroSearchModule})
+@Injectable({providedIn: HeroSearchApiModule})
 export class HeroSearchService {
   private readonly id = ++count;
   constructor(private http: HttpClient) {}
