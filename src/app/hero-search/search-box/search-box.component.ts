@@ -1,22 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable, Subject, of } from 'rxjs';
-import {
-  catchError,
-  debounceTime,
-  distinctUntilChanged,
-  switchMap
-} from 'rxjs/operators';
-import { Hero } from './hero';
-import { HeroSearchService } from './hero-search.service';
+import {Router} from '@angular/router';
+import {HeroSearchService} from '../hero-search.service';
+import {catchError, debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
+import {Observable, of, Subject} from 'rxjs/index';
+import {Hero} from '../../shared/hero';
 
 @Component({
-  selector: 'my-hero-search',
-  templateUrl: './hero-search.component.html',
-  styleUrls: ['./hero-search.component.css'],
-  providers: [HeroSearchService]
+  selector: 'my-search-box',
+  templateUrl: './search-box.component.html',
+  styleUrls: ['./search-box.component.css']
 })
-export class HeroSearchComponent implements OnInit {
+export class SearchBoxComponent implements OnInit {
+
   heroes: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
 
@@ -38,9 +33,9 @@ export class HeroSearchComponent implements OnInit {
         term =>
           term // switch to new observable each time
             ? // return the http search observable
-              this.heroSearchService.search(term)
+            this.heroSearchService.search(term)
             : // or the observable of empty heroes if no search term
-              of<Hero[]>([])
+            of<Hero[]>([])
       ),
       catchError(error => {
         // TODO: real error handling

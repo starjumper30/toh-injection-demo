@@ -5,8 +5,12 @@ import { catchError, map } from 'rxjs/operators';
 
 import { Hero } from './hero';
 
+let count = 0;
+
 @Injectable()
+// @Injectable({providedIn: 'root'})
 export class HeroService {
+  private readonly id = ++count;
   private heroesUrl = 'app/heroes'; // URL to web api
 
   constructor(private http: HttpClient) {}

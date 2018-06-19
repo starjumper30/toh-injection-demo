@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HeroService} from './shared/hero.service';
 
 @Component({
   selector: 'my-root',
@@ -6,8 +7,8 @@ import { Component } from '@angular/core';
     <h1>{{title}}</h1>
     <div class="header-bar"></div>
     <nav>
-      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>&nbsp;
+      <a routerLink="/heroes" routerLinkActive="active">Heroes (Lazy)</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -15,4 +16,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+
+  constructor(public heroService: HeroService){}
 }

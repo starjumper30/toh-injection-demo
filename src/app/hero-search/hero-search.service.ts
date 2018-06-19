@@ -3,10 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError as observableThrowError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { Hero } from './hero';
+import { Hero } from '../shared/hero';
 
+let count = 0;
 @Injectable()
+// @Injectable({providedIn: 'root'})
 export class HeroSearchService {
+  private readonly id = ++count;
   constructor(private http: HttpClient) {}
 
   search(term: string): Observable<Hero[]> {
