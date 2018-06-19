@@ -1,11 +1,17 @@
 # Getting Started
 
-Super simple Angular app with 1 module and 2 routes. This is a minor variation on the Tour of Heroes I wrote for the [official docs](https://angular.io/tutorial).
+This is a modification of [John Papa's version](https://github.com/johnpapa/angular-tour-of-heroes) of 
+the [Tour of Heroes tutorial](https://angular.io/tutorial) application. I have added additional complexity in order to fully demonstrate Angular dependency injection.
+
+## Presentation
+
+This example was created for the June 2018 [Angular Lunch presentation.](https://www.meetup.com/Angular-Lunch/events/251077213/)
+Links to the slides and the YouTube video will be forthcoming.
 
 ## Get the Code
 ```
-git clone https://github.com/johnpapa/angular-tour-of-heroes.git toh
-cd toh
+git clone https://github.com/starjumper30/toh-injection-demo.git toh-inject
+cd toh-inject
 npm i
 ```
 
@@ -13,26 +19,10 @@ npm i
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Augury
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
-
+Install the [Augury](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd?hl=en) Chrome extension so that you can view the injector tree in the Chrome Dev Tools.
