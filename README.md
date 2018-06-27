@@ -7,8 +7,8 @@ the [Tour of Heroes tutorial](https://angular.io/tutorial) application. I have a
 
 This example was created for the June 2018 [Angular Lunch presentation.](https://www.meetup.com/Angular-Lunch/events/251077213/)
 
-[Slides](https://docs.google.com/presentation/d/1PZU94vRacl_NgqsPe7uGb_vnhLCVcsqCuUTli4gHfrc/edit?usp=sharing) are available.
-YouTube link will be forthcoming.
+[Slides](https://docs.google.com/presentation/d/1PZU94vRacl_NgqsPe7uGb_vnhLCVcsqCuUTli4gHfrc/edit?usp=sharing), 
+[Video](https://youtu.be/m3Yml9dFxdg)
 
 ## Get the Code
 ```
